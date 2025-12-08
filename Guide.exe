@@ -1,0 +1,97 @@
+🚀 TypeScript Project Setup — Step-by-Step (with Emojis)
+🟩 Step 1 — Initialize npm
+npm init -y
+
+
+Creates a fresh package.json ✔️
+
+📦 Step 2 — Install TypeScript
+npm i -D typescript
+# or
+npm install typescript --save-dev
+
+
+(Optional but recommended):
+
+npm i -D @types/node
+
+
+✔️ Gives you Node.js type support.
+
+⚙️ Step 3 — Create tsconfig.json
+
+Run:
+
+npx tsc --init
+
+
+Then edit tsconfig.json:
+
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "target": "es2020",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
+}
+
+
+📁 rootDir → source files
+📁 outDir → output compiled JS
+
+📝 Step 4 — Create src/index.ts
+
+Make file:
+
+src/index.ts
+
+
+Add simple TS code:
+
+function greet(name: string): string {
+  return `Hello, ${name}! 👋`;
+}
+
+console.log(greet("Vedant"));
+
+🏗️ Step 5 — Compile TypeScript
+npx tsc
+
+
+Then run the generated JS:
+
+node ./dist/index.js
+
+
+You should see:
+
+Hello, Vedant! 👋
+
+🔄 Step 6 — Auto-compile with Watch Mode
+npx tsc --watch
+
+
+🟡 Now TypeScript will auto-compile every time you save.
+No need to run tsc again 👍
+
+⚡ Recommended: Add npm Scripts
+
+Edit package.json:
+
+"scripts": {
+  "build": "tsc",
+  "watch": "tsc --watch",
+  "start": "node ./dist/index.js",
+  "dev": "npm run build && npm run start"
+}
+
+
+Run them:
+
+npm run build     # 🏗️ compile
+npm start         # ▶️ run JS
+npm run watch     # 🔄 auto compile

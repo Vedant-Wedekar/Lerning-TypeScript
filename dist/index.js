@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function greet(name) {
-    return `hey ved this is  ${name}`;
+function add(a, b) {
+    return a + b;
 }
-const username = "Anuuu";
-console.log(greet(username));
+var a = 10;
+const b = 110;
+console.log(add(a, b));
 //# sourceMappingURL=index.js.map
