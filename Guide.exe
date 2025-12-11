@@ -95,3 +95,6 @@ Run them:
 npm run build     # 🏗️ compile
 npm start         # ▶️ run JS
 npm run watch     # 🔄 auto compile
+
+
+🎉 You’re all set! Happy coding with TypeScript! 🚀
