@@ -7,9 +7,6 @@ const ice_cream : string[] = ['choco', 'vanila' , 'pista']
 const age : number[] = [12,34,56,78]
 
 const rating : Array<number> = [4.3,3.4]
-
-
-
 type tpp ={
     name :string,
     prices : number
